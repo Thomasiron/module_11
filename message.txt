@@ -1,0 +1,59 @@
+Entiteiten:
+•	Film
+•	Klant
+•	Bioscoopzaal
+•	Voorstelling
+•	Ticket
+•	Betaling
+
+Attributen:
+•	Film:
+•	FilmID (Primaire sleutel)
+•	Titel
+•	Genre
+•	Duur
+•	Klant:
+•	KlantID (Primaire sleutel)
+•	Naam
+•	E-mail
+•	Telefoonnummer
+•	Bioscoopzaal:
+•	ZaalID (Primaire sleutel)
+•	Naam
+•	Capaciteit
+•	Voorstelling:
+•	VoorstellingID (Primaire sleutel)
+•	Datum en tijd
+•	FilmID (Vreemde sleutel naar Film)
+•	ZaalID (Vreemde sleutel naar Bioscoopzaal)
+•	Ticket:
+•	TicketID (Primaire sleutel)
+•	VoorstellingID (Vreemde sleutel naar Voorstelling)
+•	KlantID (Vreemde sleutel naar Klant)
+•	Betaling:
+•	BetalingsID (Primaire sleutel)
+•	TicketID (Vreemde sleutel naar Ticket)
+•	Bedrag
+•	Betaalwijze
+
+•	De relaties: Een Klant kan meerdere Tickets kopen, maar een Ticket hoort bij één Klant.
+•	
+•	Een Voorstelling heeft meerdere Tickets, maar een Ticket hoort bij één Voorstelling.
+•	Een Film kan in meerdere Voorstellingen worden vertoond, maar een Voorstelling hoort bij één Film.
+•	Een Voorstelling vindt plaats in één Bioscoopzaal, maar een Bioscoopzaal kan meerdere Voorstellingen hebben.
+
+Cardinaliteit:
+•	Klant - Ticket: 1-op-veel (Een Klant kan meerdere Tickets kopen, maar elk Ticket hoort bij één Klant).
+•	Voorstelling - Ticket: 1-op-veel (Een Voorstelling kan meerdere Tickets hebben, maar elk Ticket hoort bij één Voorstelling).
+•	Film - Voorstelling: 1-op-veel (Een Film kan in meerdere Voorstellingen worden vertoond, maar elke Voorstelling hoort bij één Film).
+•	Voorstelling - Bioscoopzaal: 1-op-1 (Elke Voorstelling vindt plaats in één Bioscoopzaal en elke Bioscoopzaal heeft één Voorstelling).
+
+ERD maken:
+Stap 6: Voeg sleutels toe
+Bepaal voor elke entiteit de primaire sleutel en markeer deze in je ERD. De primaire sleutel is een uniek identificerend attribuut voor elke entiteit.
+Stap 7: Verfijn het diagram
+Voeg attributen toe aan de entiteiten en specificieer de relaties verder. Zorg ervoor dat het diagram duidelijk en leesbaar is.
+Stap 8: Documenteer het diagram
+Voeg een legenda toe aan je ERD om de symbolen en notaties te verklaren. Documenteer ook de betekenis van elk attribuut en de aard van elke relatie.
+Stap 9: Valideer en verbeter
+Laat anderen je ERD bekijken en feedback geven. Verbeter het diagram op basis van de feedback en zorg ervoor dat het de werking van je bioscoop ticket systeem nauwkeurig weerspiegelt.
